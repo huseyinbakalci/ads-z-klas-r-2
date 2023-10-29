@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hüseyin Yusuf Bakalcı - Kişisel Web Sitesi</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #223d40;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+
+      nav {
+        background-color: #444;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+      }
+
+      section {
+        padding: 20px;
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-bottom: 8px;
+      }
+
+      input,
+      textarea {
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 3px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+      .skills-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .skill {
+        flex-grow: 1;
+        margin: 0 10px;
+        text-align: center;
+      }
+
+      .skill-bar {
+        background-color: #3498db;
+        height: 20px;
+        margin-top: 5px;
+        transition: width 0.5s ease;
+      }
+      .big-text {
+        font-size: 24px; /* veya diğer bir boyut */
+      }
+      .round-image {
+        border-radius: 50%;
+        width: 100px;
+      }
+      .icon_size {
+        width: 16px;
+      }
+      .image-container {
+        float: left; /* Resmi sola hizalayın */
+        margin-right: 20px; /* Resim ile metin arasında bir boşluk bırakın */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Hüseyin Yusuf Bakalcı</h1>
+      <p>Kişisel Web Sitesi</p>
+    </header>
+
+    <nav>
+      <a href="#anasayfa">Anasayfa</a>
+      <a href="#beceri">Becerilerim</a>
+      <a href="#hakkında">Hakkında</a>
+      <a href="#iletişim">İletişim</a>
+    </nav>
+
+    <section id="anasayfa">
+      <h2>Merhaba!</h2>
+      <p class="big-text">
+        Ben <font color="blue"> Hüseyin </font> sayfama hoşgeldiniz
+      </p>
+      <link rel="icon" href="fluidicon.ico" type="image/x-icon" />
+
+      <a href="https://github.com/huseyinbakalci">
+        <img src="fluidicon.ico" alt="" class="icon_size" />
+
+        <a href="hhttps://github.com/huseyinbakalci"></a>
+      </a>
+    </section>
+
+    <section id="beceri">
+      <h2>Becerilerim</h2>
+      <div class="skills-container">
+        <div class="skill">
+          <p>HTML</p>
+          <div class="skill-bar" style="width: 70%"></div>
+        </div>
+        <div class="skill">
+          <p>CSS</p>
+          <div class="skill-bar" style="width: 30%"></div>
+        </div>
+        <div class="skill">
+          <p>JavaScript</p>
+          <div class="skill-bar" style="width: 20%"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hakkında">
+      <h2><strong>Hakkında</strong></h2>
+      <div class="image-container">
+        <img src="IMG_6870.jpg" alt="me" class="round-image" />
+      </div>
+      <p>
+        Merhaba, Ben Hüseyin. Süleyman Demirel Üniversitesi bilgisayar
+        mühendisliği 3. sınıf öğrencisiyim. Yazılıma duyduğum ilgi ile kendimi
+        geliştiriyorum. Şuan da web teknolojileri alanında geliştirmekteyim.
+        Farklı alanlarda bilgi toplayarak daha çok deneyim kazanmaya çalışıyorum
+      </p>
+    </section>
+
+    <section id="iletişim">
+      <h2>İletişim</h2>
+      <form id="contactForm" onsubmit="submitForm(event)">
+        <label for="name">Adınız:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">E-posta:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Mesajınız:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Gönder</button>
+      </form>
+    </section>
+
+    <script>
+      function submitForm(event) {
+        event.preventDefault();
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+
+        console.log("Ad: " + name);
+        console.log("E-posta: " + email);
+        console.log("Mesaj: " + message);
+
+        alert("Teşekkür ederiz! Mesajınız alınmıştır.");
+      }
+    </script>
+  </body>
+</html>
